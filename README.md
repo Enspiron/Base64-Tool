@@ -8,10 +8,16 @@ Base64 Tool also keeps a log history of your past decodes/encodes so you can kee
 Base64 Tool also features a quick button for encoding/decoding to from the clipboard directly to the clipboard. 
 
 The Main Window:
+
+
 ![Main Window](https://github.com/Enspiron/Base64-Tool/blob/master/screenshots/main.png)
 
 The History Window:
+
+
 ![The History Window](https://github.com/Enspiron/Base64-Tool/blob/master/screenshots/history.png)
 
 The Site Window:
+
+
 ![The Site Window]}(https://github.com/Enspiron/Base64-Tool/blob/master/screenshots/web.png)
