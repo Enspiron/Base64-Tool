@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.OG = new System.Windows.Forms.RichTextBox();
             this.v = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -36,14 +35,17 @@
             this.NEW = new System.Windows.Forms.RichTextBox();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.copyOutput = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.pDC = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.pEC = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.clearOG = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.clearNEW = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // OG
             // 
-            this.OG.Location = new System.Drawing.Point(58, 96);
+            this.OG.Location = new System.Drawing.Point(44, 158);
             this.OG.Name = "OG";
             this.OG.Size = new System.Drawing.Size(411, 96);
             this.OG.TabIndex = 0;
@@ -55,7 +57,7 @@
             this.v.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.v.Depth = 0;
             this.v.Icon = null;
-            this.v.Location = new System.Drawing.Point(114, 215);
+            this.v.Location = new System.Drawing.Point(100, 277);
             this.v.MouseState = MaterialSkin.MouseState.HOVER;
             this.v.Name = "v";
             this.v.Primary = true;
@@ -71,7 +73,7 @@
             this.Encode.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Encode.Depth = 0;
             this.Encode.Icon = null;
-            this.Encode.Location = new System.Drawing.Point(331, 215);
+            this.Encode.Location = new System.Drawing.Point(317, 277);
             this.Encode.MouseState = MaterialSkin.MouseState.HOVER;
             this.Encode.Name = "Encode";
             this.Encode.Primary = true;
@@ -83,7 +85,7 @@
             // 
             // NEW
             // 
-            this.NEW.Location = new System.Drawing.Point(58, 277);
+            this.NEW.Location = new System.Drawing.Point(44, 339);
             this.NEW.Name = "NEW";
             this.NEW.Size = new System.Drawing.Size(411, 96);
             this.NEW.TabIndex = 3;
@@ -95,7 +97,7 @@
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(246, 215);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(232, 277);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -111,7 +113,7 @@
             this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(97, 391);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(83, 453);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -121,18 +123,13 @@
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             this.materialRaisedButton2.Click += new System.EventHandler(this.MaterialRaisedButton2_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
             // materialRaisedButton3
             // 
             this.materialRaisedButton3.AutoSize = true;
             this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton3.Depth = 0;
             this.materialRaisedButton3.Icon = null;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(349, 391);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(335, 453);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
@@ -148,7 +145,7 @@
             this.copyOutput.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.copyOutput.Depth = 0;
             this.copyOutput.Icon = null;
-            this.copyOutput.Location = new System.Drawing.Point(210, 391);
+            this.copyOutput.Location = new System.Drawing.Point(196, 453);
             this.copyOutput.MouseState = MaterialSkin.MouseState.HOVER;
             this.copyOutput.Name = "copyOutput";
             this.copyOutput.Primary = true;
@@ -158,12 +155,80 @@
             this.copyOutput.UseVisualStyleBackColor = true;
             this.copyOutput.Click += new System.EventHandler(this.CopyOutput_Click);
             // 
+            // pDC
+            // 
+            this.pDC.AutoSize = true;
+            this.pDC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pDC.Depth = 0;
+            this.pDC.Icon = null;
+            this.pDC.Location = new System.Drawing.Point(44, 106);
+            this.pDC.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pDC.Name = "pDC";
+            this.pDC.Primary = true;
+            this.pDC.Size = new System.Drawing.Size(174, 36);
+            this.pDC.TabIndex = 8;
+            this.pDC.Text = "Paste->Decode->Copy";
+            this.pDC.UseVisualStyleBackColor = true;
+            this.pDC.Click += new System.EventHandler(this.PDC_Click);
+            // 
+            // pEC
+            // 
+            this.pEC.AutoSize = true;
+            this.pEC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pEC.Depth = 0;
+            this.pEC.Icon = null;
+            this.pEC.Location = new System.Drawing.Point(281, 106);
+            this.pEC.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pEC.Name = "pEC";
+            this.pEC.Primary = true;
+            this.pEC.Size = new System.Drawing.Size(175, 36);
+            this.pEC.TabIndex = 9;
+            this.pEC.Text = "Paste->Encode->Copy";
+            this.pEC.UseVisualStyleBackColor = true;
+            this.pEC.Click += new System.EventHandler(this.PEC_Click);
+            // 
+            // clearOG
+            // 
+            this.clearOG.AutoSize = true;
+            this.clearOG.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clearOG.Depth = 0;
+            this.clearOG.Icon = null;
+            this.clearOG.Location = new System.Drawing.Point(481, 188);
+            this.clearOG.MouseState = MaterialSkin.MouseState.HOVER;
+            this.clearOG.Name = "clearOG";
+            this.clearOG.Primary = true;
+            this.clearOG.Size = new System.Drawing.Size(30, 36);
+            this.clearOG.TabIndex = 10;
+            this.clearOG.Text = "X  ";
+            this.clearOG.UseVisualStyleBackColor = true;
+            this.clearOG.Click += new System.EventHandler(this.ClearOG_Click);
+            // 
+            // clearNEW
+            // 
+            this.clearNEW.AutoSize = true;
+            this.clearNEW.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clearNEW.Depth = 0;
+            this.clearNEW.Icon = null;
+            this.clearNEW.Location = new System.Drawing.Point(481, 371);
+            this.clearNEW.MouseState = MaterialSkin.MouseState.HOVER;
+            this.clearNEW.Name = "clearNEW";
+            this.clearNEW.Primary = true;
+            this.clearNEW.Size = new System.Drawing.Size(30, 36);
+            this.clearNEW.TabIndex = 11;
+            this.clearNEW.Text = "X  ";
+            this.clearNEW.UseVisualStyleBackColor = true;
+            this.clearNEW.Click += new System.EventHandler(this.ClearNEW_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(539, 450);
+            this.ClientSize = new System.Drawing.Size(539, 522);
+            this.Controls.Add(this.clearNEW);
+            this.Controls.Add(this.clearOG);
+            this.Controls.Add(this.pEC);
+            this.Controls.Add(this.pDC);
             this.Controls.Add(this.copyOutput);
             this.Controls.Add(this.materialRaisedButton3);
             this.Controls.Add(this.materialRaisedButton2);
@@ -190,9 +255,12 @@
         private System.Windows.Forms.RichTextBox NEW;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private System.Windows.Forms.Timer timer1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
         private MaterialSkin.Controls.MaterialRaisedButton copyOutput;
+        private MaterialSkin.Controls.MaterialRaisedButton pDC;
+        private MaterialSkin.Controls.MaterialRaisedButton pEC;
+        private MaterialSkin.Controls.MaterialRaisedButton clearOG;
+        private MaterialSkin.Controls.MaterialRaisedButton clearNEW;
     }
 }
 
