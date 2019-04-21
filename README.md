@@ -20,4 +20,4 @@ The History Window:
 The Site Window:
 
 
-![The Site Window]}(https://github.com/Enspiron/Base64-Tool/blob/master/screenshots/web.png)
+![The Site Window](https://github.com/Enspiron/Base64-Tool/blob/master/screenshots/web.png)
